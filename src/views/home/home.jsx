@@ -3,6 +3,8 @@ import defaultIconLg from '../../img/default-profile-icon-lg.png';
 import defaultIconSm from '../../img/default-profile-icon-sm.png';
 import ProgressLine from '../../components/ProgressLine';
 import Typewriter from 'typewriter-effect';
+import { Link } from 'react-router-dom';
+import './home.css';
 
 function home() {
     const url = 'https://zaos-website.com/home';
@@ -77,6 +79,12 @@ function home() {
                                         />
                                     </div>
                                 </div>
+                            </div>
+                            <div className='pt-3 text-center'>
+                                <Link className='btn btn-primary'
+                                    to="/about-me">
+                                    Next
+                                </Link>
                             </div>
                         </div>
                     </div>
