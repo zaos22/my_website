@@ -1,11 +1,22 @@
-import { React } from 'react';
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import { useLocation, Link } from "react-router-dom";
+import { gsapLoader } from '../../components/gsapLoader';
+import { FcNext } from "react-icons/fc";
 import defaultIconLg from '../../img/default-profile-icon-lg.png';
 import defaultIconSm from '../../img/default-profile-icon-sm.png';
+import Typewriter from 'typewriter-effect';
+import './AboutMe.css';
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import ProgressLine from '../../components/ProgressLine';
 
-function home() {
+function AboutMe() {
     const url = 'https://zaos-website.com/about-me';
+
+    let location = useLocation();
+    useEffect(() => {
+        gsap.fromTo(".content", { opacity: 0, x: 300 }, { opacity: 1, x: 0 });
+    }, [location]);
 
     return (
         <div className="home">
@@ -53,16 +64,23 @@ function home() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-8 top-info">
+                        <div className="col-12 col-md-8 top-info content">
                             <div className='quote-left'>
                                 <ImQuotesLeft color='black' size={25} />
                             </div>
                             <div className="info-container">
                                 <div className=''>
                                     <div className='meta-info-align fw-bold'>
-                                        <p className='meta-info'>
-                                            I'm Oussama, a passionate web developer with a strong command of full-stack programming. My objective is to turn ideas into minimalist websites, but at the same time that captivate and engage users. Let's build something simple, but amazing together!
-                                        </p>
+                                        <div className='meta-info'>
+                                            <Typewriter
+                                                options={{
+                                                    strings: ["I'm Oussama, a passionate web developer with a strong command of full-stack programming. My objective is to turn ideas into minimalist websites, but at the same time that captivate and engage users. Let's build something simple, but amazing together!", ""],
+                                                    autoStart: true,
+                                                    loop: true,
+                                                    deleteSpeed: true,
+                                                }}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -77,4 +95,4 @@ function home() {
     );
 }
 
-export default home;
+export default AboutMe;
