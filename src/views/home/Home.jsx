@@ -68,8 +68,19 @@ function Home() {
                                 <div className="info-container">
                                     <div className=''>
                                         <div className='meta-info-align text-center'>
-                                            <p className='title text-center fw-bold'>
+                                            <p className='title-lg text-center fw-bold'>
                                                 {Array.from("Welcome to my web page!").map((char, index) => (
+                                                    <span
+                                                        key={index}
+                                                        className={`bounce-letter letter-${index}`}
+                                                        style={{ "--animation-order": index }}
+                                                    >
+                                                        {char === " " ? "\u00A0" : char}
+                                                    </span>
+                                                ))}
+                                            </p>
+                                            <p className='title-sm text-center fw-bold'>
+                                                {Array.from("Welcome!").map((char, index) => (
                                                     <span
                                                         key={index}
                                                         className={`bounce-letter letter-${index}`}
