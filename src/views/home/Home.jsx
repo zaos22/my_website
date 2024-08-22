@@ -79,13 +79,15 @@ function Home() {
                                                     </span>
                                                 ))}
                                             </p>
+                                            <div className="subtitle">
                                             <Typewriter
                                                 options={{
-                                                    strings: ["Full Stack Developer", "Portfolio by Oussama Zazou"],
+                                                    strings: ["Full Stack Developer", "Portfolio by Zaos"],
                                                     autoStart: true,
                                                     loop: true,
                                                 }}
                                             />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

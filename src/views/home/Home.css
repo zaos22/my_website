@@ -11,8 +11,19 @@
 
 /* Title */
 .title {
-  font-size: 24px;
+  padding-bottom: 5px;
+  font-size: 22px;
   color: black;
+}
+
+/* Responsive Subtitle */
+@media only screen and (max-width: 375px) {
+  /* Title */
+  .title {
+    padding-bottom: 5px;
+    font-size: 20px;
+    color: black;
+  }
 }
 
 @keyframes bounce {
@@ -39,7 +50,7 @@
 
 /* Subtitle */
 .subtitle {
-  font-size: 14px;
+  font-size: 12px;
   color: black;
 }
 
@@ -55,8 +66,8 @@
   left: 50%;
   width: 60%;
   height: auto;
-  transform: translate(-50%, -50%); 
-  opacity: 0; 
+  transform: translate(-50%, -50%);
+  opacity: 0;
   padding: 10px;
   animation: fadeInEffect 0.8s ease-out forwards;
 }
@@ -124,7 +135,7 @@
     opacity: 0;
     padding: 10px;
     will-change: transform;
-    transform-origin: center center; 
+    transform-origin: center center;
     animation: popUpEffect 0.6s ease-out forwards;
   }
 
