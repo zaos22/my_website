@@ -64,13 +64,22 @@
 
 /* Profile Image */
 .image-icon-container {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #ffdfd1;
+  box-shadow: inset 0 0 10px #000000b7;
+  border-radius: 50%;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+  position: relative;
 }
 
 .image-lg {
@@ -113,10 +122,25 @@
 
   .image-lg {
     display: block;
+    transition: transform 0.2s;
+  }
+
+  .image-lg:hover {
+    transform: scale(1.1);
   }
 
   .input-sm {
     display: none;
+  }
+
+  .image-icon {
+    background-color: #ffdfd1;
+    box-shadow: inset 0 0 10px #000000b7;
+    border-radius: 50%;
+    width: 225px;
+    height: 225px;
+    overflow: hidden;
+    position: relative;
   }
 
   .image-icon-container {
