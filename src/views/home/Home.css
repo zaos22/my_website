@@ -11,10 +11,18 @@
 
 /* Title */
 .title {
-  font-size: 24px;
-  color: black;
+  padding-bottom: 5px;
 }
 
+.title-lg{
+  display: none;
+}
+
+.title-sm {
+  font-size: 24px;
+  display: block;
+}
+/* Keyframes for bounce effect */
 @keyframes bounce {
   0%,
   20%,
@@ -39,7 +47,8 @@
 
 /* Subtitle */
 .subtitle {
-  font-size: 14px;
+  padding-top: 5px;
+  font-size: 12px;
   color: black;
 }
 
@@ -56,7 +65,19 @@
   width: 60%;
   height: auto;
   transform: translate(-50%, -50%);
+  opacity: 0;
   padding: 10px;
+  animation: fadeInEffect 0.8s ease-out forwards;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Arrow Next */
@@ -96,7 +117,32 @@
 }
 
 /* Responsive Home */
+@media only screen and (min-width: 1024px) {
+  .title-lg{
+    display: block;
+    font-size: 24px;
+  }
+
+  .title-sm {
+    display: none;
+  }
+
+  .subtitle{
+    font-size: 14px;
+  }
+}
+
+/* Responsive Home */
 @media only screen and (min-width: 1224px) {
+  .title-lg{
+    display: block;
+    font-size: 35px;
+  }
+
+  .title-sm {
+    display: none;
+  }
+
   .center-box {
     background: url("../../img/backgorund-image.gif") no-repeat center fixed;
     object-fit: cover;
@@ -108,10 +154,12 @@
     left: 50%;
     width: 60%;
     height: auto;
-    transform: translate(-50%, -50%) scale(0.95); /* Slightly larger initial scale */
-    opacity: 0; /* Initial opacity */
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
     padding: 10px;
-    animation: popUpEffect 0.6s ease-out forwards; /* Faster and smoother animation */
+    will-change: transform;
+    transform-origin: center center;
+    animation: popUpEffect 0.6s ease-out forwards;
   }
 
   @keyframes popUpEffect {
@@ -121,7 +169,7 @@
     }
     80% {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1.02); /* Slight overshoot for sharpness */
+      transform: translate(-50%, -50%) scale(1.02);
     }
     100% {
       opacity: 1;
@@ -129,12 +177,8 @@
     }
   }
 
-  .title {
-    font-size: 50px;
-  }
-
   .subtitle {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   .meta-info-align {
