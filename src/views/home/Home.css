@@ -22,7 +22,7 @@
   font-size: 24px;
   display: block;
 }
-
+/* Keyframes for bounce effect */
 @keyframes bounce {
   0%,
   20%,
