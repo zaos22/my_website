@@ -15,12 +15,12 @@ function AboutMe() {
 
     let location = useLocation();
     useEffect(() => {
-        gsap.fromTo(".content", { opacity: 0, x: 300 }, { opacity: 1, x: 0 });
+        gsap.fromTo(".content", { opacity: 0, x: 0, y: -100 }, { opacity: 1, x: 0, y: 0 });
     }, [location]);
 
     return (
-        <div className="home">
-            <div className='center'>
+        <div className="about-me">
+            <div className='center-box'>
                 <div className='top-bar'>
                     <div className='dots-container'>
                         <div className='dot1 mt-2' />

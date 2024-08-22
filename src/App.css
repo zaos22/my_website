@@ -1,28 +1,8 @@
 /* General Background */
 .background {
-  position: relative;
-  background: url("img/Background-image.jpg") no-repeat center fixed;
-  background-size: cover;
   width: 100%;
   height: 100vh;
-  object-fit: cover;
   overflow-x: hidden;
-}
-
-/* Box Center Template */
-.center {
-  background: url("img/backgorund-image.gif") no-repeat center fixed;
-  object-fit: cover;
-  background-size: cover;
-  box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.829);
-  border-radius: 5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 60%;
-  height: auto;
-  transform: translate(-50%, -50%);
-  padding: 10px;
 }
 
 /* Top Bar */
@@ -82,15 +62,6 @@
   justify-content: start;
 }
 
-/* Quote */
-.quote-right {
-  margin: 0px;
-}
-
-.quote-left {
-  margin: 0px;
-}
-
 /* Profile Image */
 .image-icon-container {
   display: block;
@@ -136,38 +107,6 @@
 
 /* Responsive Home */
 @media only screen and (min-width: 1224px) {
-  .center {
-    background: url("/src/img/backgorund-image.gif") no-repeat center fixed;
-    object-fit: cover;
-    background-size: cover;
-    box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.829);
-    border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 60%;
-    height: auto;
-    transform: translate(-50%, -50%) scale(0.95); /* Slightly larger initial scale */
-    opacity: 0; /* Initial opacity */
-    padding: 10px;
-    animation: popUpEffect 0.6s ease-out forwards; /* Faster and smoother animation */
-  }
-
-  @keyframes popUpEffect {
-    0% {
-      opacity: 0;
-      transform: translate(-50%, -50%) scale(0.95);
-    }
-    80% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1.02); /* Slight overshoot for sharpness */
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -50%) scale(1);
-    }
-  }
-
   .image-sm {
     display: none;
   }
@@ -210,13 +149,5 @@
   .background {
     overflow: hidden;
     overflow-x: hidden;
-  }
-
-  .quote-right {
-    margin-right: 10px;
-  }
-
-  .quote-left {
-    margin-left: 10px;
   }
 }
