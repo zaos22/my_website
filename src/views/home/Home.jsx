@@ -47,7 +47,7 @@ function Home() {
                         <div className="col-12 col-md-4">
                             <div className="p-3">
                                 <div className='image-icon-container'>
-                                    <div className='image-icon'>
+                                    <div className='image-icon image-background'>
                                         <div className="img-load">
                                             <img className="image-lg" src={defaultIconLg} alt="Default Icon" />
                                             <img className="image-sm" src={defaultIconSm} alt="Default Icon" />
