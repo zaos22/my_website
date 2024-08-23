@@ -57,7 +57,7 @@
   background: url("../../img/backgorund-image.gif") no-repeat center fixed;
   object-fit: cover;
   background-size: cover;
-  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8); /* Reduced blur-radius */
+  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   position: absolute;
   top: 50%;
@@ -145,7 +145,7 @@
   }
 
   .center-box-home {
-    box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.829);
+    box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.8);
     transform: translate(-50%, -50%) scale(0.95);
     will-change: transform;
     transform-origin: center center;
