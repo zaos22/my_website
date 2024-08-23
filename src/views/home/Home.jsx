@@ -22,7 +22,7 @@ function Home() {
 
     return (
         <div className="home">
-            <div className='center-box'>
+            <div className='center-box-home'>
                 <div className='top-bar'>
                     <div className='dots-container'>
                         <div className='dot1 mt-2' />
