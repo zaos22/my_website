@@ -9,6 +9,11 @@
   overflow-x: hidden;
 }
 
+/* Image Circle Background */
+.image-background{
+  background-color: #ffdfd1;
+}
+
 /* Title */
 .title {
   padding-bottom: 5px;
