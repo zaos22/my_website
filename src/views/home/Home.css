@@ -87,7 +87,7 @@
 
 .next-arrow-bounce {
   display: inline-block;
-  animation: bounce 5s ease-in-out infinite;
+  animation: bounce 3s ease-in-out infinite;
   animation-delay: calc(var(--animation-order) * 3s);
 }
 
