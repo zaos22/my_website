@@ -53,20 +53,33 @@
 }
 
 /* Box Center Template */
-.center-box {
+.center-box-home {
   background: url("../../img/backgorund-image.gif") no-repeat center fixed;
   object-fit: cover;
   background-size: cover;
+  box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   position: absolute;
   top: 50%;
   left: 50%;
   width: 60%;
   height: auto;
+  transform: translate(-50%, -50%);
+  opacity: 0;
   padding: 10px;
+  animation: fadeInEffect 0.8s ease-out forwards;
 }
 
 
+/* Keyframes for fade-in effect */
+@keyframes fadeInEffect {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Arrow Next */
 .next-arrow {
@@ -131,10 +144,9 @@
     display: none;
   }
 
-  .center-box {
-    box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.829);
+  .center-box-home {
+    box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.8);
     transform: translate(-50%, -50%) scale(0.95);
-    opacity: 0;
     will-change: transform;
     transform-origin: center center;
     animation: popUpEffect 0.6s ease-out forwards;
