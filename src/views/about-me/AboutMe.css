@@ -88,10 +88,12 @@
 /* Quote */
 .quote-right {
   margin: 0px;
+  margin-bottom: 10px;
 }
 
 .quote-left {
-  margin: 0px;
+  margin-bottom: 10px;
+  padding: 0px;
 }
 
 /* Responsive Home */
@@ -109,9 +111,11 @@
 
   .quote-right {
     margin-right: 10px;
+    margin-bottom: 0px;
   }
 
   .quote-left {
+    margin-top: 20px;
     margin-left: 10px;
   }
 }

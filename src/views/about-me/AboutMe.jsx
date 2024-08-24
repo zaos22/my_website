@@ -20,11 +20,15 @@ function AboutMe() {
         gsap.fromTo(".img-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, delay: 0.5, duration: 1 });
         gsap.fromTo(".content-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0, duration: 2 });
         gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 3 });
+        gsap.fromTo(".progress-load", { opacity: 0, x: 0, y: 50 }, { opacity: 1, x: 0, y: 0, duration: 1 });
+        gsap.fromTo(".label-bar-load", { opacity: 0, x: 0, y: -20 }, { opacity: 1, x: 0, y: 0, duration: 1 });
     }, [location]);
 
     const handleLinkClick = (e) => {
         e.preventDefault();
         gsap.to(".text-load", { opacity: 0, x: -100, y: 0, duration: 1 });
+        gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
+        gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
         gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
         gsap.to(".arrow-load", {
@@ -71,27 +75,31 @@ function AboutMe() {
                                         </div>
                                     </div>
                                     <div className='mt-4'>
-                                        <h6 className='progress-text'>About me!</h6>
-                                        <ProgressLine
-                                            backgroundColor="lightblue"
-                                            visualParts={[
-                                                {
-                                                    percentage: "20%",
-                                                    color: "indianred"
-                                                }
-                                            ]}
-                                        />
+                                        <div className="label-bar-load">
+                                            <h6 className='progress-text'>About me!</h6>
+                                        </div>
+                                        <div className="progress-load">
+                                            <ProgressLine
+                                                backgroundColor="lightblue"
+                                                visualParts={[
+                                                    {
+                                                        percentage: "20%",
+                                                        color: "indianred"
+                                                    }
+                                                ]}
+                                            />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="col-12 col-md-8 top-info text-load">
-                                <div className='pt-5 quote-left'>
+                                <div className='quote-left'>
                                     <ImQuotesLeft color='black' size={25} />
                                 </div>
                                 <div className="info-container">
                                     <div className=''>
                                         <div className='info-align-about-me fw-bold'>
-                                            <div className='meta-info-about-me'>
+                                            <div className='pt-1 meta-info-about-me'>
                                                 <Typewriter
                                                     options={{
                                                         strings: ['I am Oussama Zazou Abid, also known as "Zaos." I am a committed and enthusiastic individual, eager to learn and contribute in dynamic environments. Through various internships, I have gained programming experience and developed skills in multiple programming languages. I bring value to the team with my technical expertise, dedication, and adaptability to diverse projects and challenges.', ""],
