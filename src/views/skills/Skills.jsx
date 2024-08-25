@@ -6,11 +6,11 @@ import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import defaultIconLg from '../../img/profile-icon-lg.png';
 import defaultIconSm from '../../img/profile-icon-sm.png';
 import Typewriter from 'typewriter-effect';
-import './AboutMe.css';
+import './Skills.css';
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import ProgressLine from '../../components/ProgressLine';
 
-function AboutMe() {
+function Skills() {
     const url = 'https://zaos-website.com/about-me';
     const navigate = useNavigate();
 
@@ -24,21 +24,7 @@ function AboutMe() {
         gsap.fromTo(".label-bar-load", { opacity: 0, x: 0, y: -20 }, { opacity: 1, x: 0, y: 0, duration: 1 });
     }, [location]);
 
-    const handleLinkClickNext = (e) => {
-        e.preventDefault();
-        gsap.to(".text-load", { opacity: 0, x: -100, y: 0, duration: 1 });
-        gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
-        gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
-        gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
-        gsap.to(".arrow-load", {
-            opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
-                navigate("/skills");
-            }
-        });
-    };
-
-    const handleLinkClickBack = (e) => {
+    const handleLinkClick = (e) => {
         e.preventDefault();
         gsap.to(".text-load", { opacity: 0, x: -100, y: 0, duration: 1 });
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
@@ -134,13 +120,13 @@ function AboutMe() {
                                 <div className="pt-4 pb-2 d-flex justify-content-center">
                                     <div className='arrow-load pe-5'>
                                         <Link
-                                            to="/" onClick={handleLinkClickBack}>
+                                            to="/" onClick={handleLinkClick}>
                                             <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                         </Link>
                                     </div>
                                     <div className='arrow-load'>
                                         <Link
-                                            to="/skills" onClick={handleLinkClickNext}>
+                                            to="/about-me" onClick={handleLinkClick}>
                                             <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                         </Link>
                                     </div>
@@ -154,4 +140,4 @@ function AboutMe() {
     );
 }
 
-export default AboutMe;
+export default Skills;
