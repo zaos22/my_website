@@ -30,7 +30,7 @@ function AboutMe() {
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
+        gsap.to(".content-load", { opacity: 0, x: -100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
                 navigate("/skills");
@@ -44,7 +44,7 @@ function AboutMe() {
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
+        gsap.to(".content-load", { opacity: 0, x: 100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
                 navigate("/");
