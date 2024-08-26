@@ -64,12 +64,14 @@ function AboutMe() {
                             <div className='dot3 mt-2 ms-1 me-3' />
                         </div>
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-sm'
                             type="text"
                             defaultValue={url}
                             disabled={true}
                         />
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-lg'
                             type="text"
                             defaultValue={url}
