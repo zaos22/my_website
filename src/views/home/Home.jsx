@@ -130,6 +130,7 @@ function Home() {
                                 </div>
                                 <div className='pt-4 pb-2 text-center arrow-load'>
                                     <Link
+                                        aria-label="Go next"
                                         to="/about-me" onClick={handleLinkClick}>
                                         <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                     </Link>
