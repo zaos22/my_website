@@ -1,142 +1,206 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { MdArrowForwardIos } from "react-icons/md";
+import { RiFolderLockFill } from "react-icons/ri";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import defaultIconLg from '../../img/profile-icon-lg.png';
-import defaultIconSm from '../../img/profile-icon-sm.png';
 import Typewriter from 'typewriter-effect';
 import './Skills.css';
-import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
-import ProgressLine from '../../components/ProgressLine';
 
 function Skills() {
-    const url = 'https://zaos-website.com/about-me';
     const navigate = useNavigate();
+
+    const [showText1, setShowText1] = useState(false);
+    const [showText2, setShowText2] = useState(false);
+    const [showText3, setShowText3] = useState(false);
+
+    useEffect(() => {
+        const timer1 = setTimeout(() => setShowText1(true), 500);
+        const timer2 = setTimeout(() => setShowText2(true), 3000);
+        const timer3 = setTimeout(() => setShowText3(true), 500);
+
+        return () => {
+            clearTimeout(timer1);
+            clearTimeout(timer2);
+            clearTimeout(timer3);
+        };
+    }, []);
 
     let location = useLocation();
     useEffect(() => {
-        gsap.fromTo(".text-load", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1 });
-        gsap.fromTo(".img-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, delay: 0.5, duration: 1 });
         gsap.fromTo(".content-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0, duration: 2 });
         gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 5 });
-        gsap.fromTo(".progress-load", { opacity: 0, x: 0, y: 50 }, { opacity: 1, x: 0, y: 0, duration: 1 });
-        gsap.fromTo(".label-bar-load", { opacity: 0, x: 0, y: -20 }, { opacity: 1, x: 0, y: 0, duration: 1 });
     }, [location]);
 
-    const handleLinkClick = (e) => {
+    const handleLinkClickNext = (e) => {
         e.preventDefault();
-        gsap.to(".text-load", { opacity: 0, x: -100, y: 0, duration: 1 });
-        gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
-        gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
-        gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
+        gsap.to(".content-load", { opacity: 0, x: -100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
-                navigate("/");
+                navigate("/education");
             }
         });
     };
 
+    const handleLinkClickBack = (e) => {
+        e.preventDefault();
+        gsap.to(".content-load", { opacity: 0, x: 100, y: 0, duration: 2 });
+        gsap.to(".arrow-load", {
+            opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
+                navigate("/about-me");
+            }
+        });
+    };
 
     return (
-        <div className="about-me">
-            <div className="about-me-align content-load">
-                <div className='center-box-about-me'>
-                    <div className='top-bar'>
+        <div className="skills">
+            <div className="skills-align content-load">
+                <div className='center-box-skills'>
+                    <div className='top-bar-skills'>
                         <div className='dots-container'>
                             <div className='dot1 mt-2' />
                             <div className='dot2 mt-2 ms-1' />
                             <div className='dot3 mt-2 ms-1 me-3' />
                         </div>
-                        <input
-                            className='input-top-bar-sm'
-                            type="text"
-                            defaultValue={url}
-                            disabled={true}
-                        />
-                        <input
-                            className='input-top-bar-lg'
-                            type="text"
-                            defaultValue={url}
-                            disabled={true}
-                        />
+                        <div className='window-top-bar'>
+                            <p>
+                                <RiFolderLockFill color="pink" /> skills — -zsh — 106x33
+                            </p>
+                        </div>/
                     </div>
-                    <div className="container px-4 mt-4 mb-4">
-                        <div className="row g-0">
-                            <div className="col-12 col-md-4">
-                                <div className="p-3">
-                                    <div className='image-icon-container'>
-                                        <div className='image-icon image-background-about-me'>
-                                            <div className="img-load">
-                                                <img className="image-lg" src={defaultIconLg} alt="Default Icon" />
-                                                <img className="image-sm" src={defaultIconSm} alt="Default Icon" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='mt-4'>
-                                        <div className="label-bar-load">
-                                            <h6 className='progress-text'>About me!</h6>
-                                        </div>
-                                        <div className="progress-load">
-                                            <ProgressLine
-                                                backgroundColor="lightblue"
-                                                visualParts={[
-                                                    {
-                                                        percentage: "20%",
-                                                        color: "indianred"
-                                                    }
-                                                ]}
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
+                    <div className="container px-2 mt-4 mb-4">
+                        <div className="d-flex">
+                            <div className={`console-text ${showText1 ? 'show-text' : ''}`}>
+                                zaos@Zaos—MacBook—Air ~ %
                             </div>
-                            <div className="col-12 col-md-8 top-info text-load">
-                                <div className='quote-left'>
-                                    <ImQuotesLeft color='black' size={25} />
-                                </div>
-                                <div className="info-container">
-                                    <div className=''>
-                                        <div className='info-align-about-me fw-bold'>
-                                            <div className='pt-1 meta-info-about-me'>
-                                                <Typewriter
-                                                    options={{
-                                                        strings: ['I am Oussama Zazou Abid, also known as "Zaos." I am a committed and enthusiastic individual, eager to learn and contribute in dynamic environments. Through various internships, I have gained programming experience and developed skills in multiple programming languages. I bring value to the team with my technical expertise, dedication, and adaptability to diverse projects and challenges.', ""],
-                                                        autoStart: true,
-                                                        loop: false,
-                                                        pauseFor: 10000000,
-                                                        delay: 10,
-                                                        deleteSpeed: 1,
-                                                    }}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className='quote-right text-end'>
-                                    <ImQuotesRight color='black' size={25} />
-                                </div>
-                                <div className="pt-4 pb-2 d-flex justify-content-center">
-                                    <div className='arrow-load pe-5'>
-                                        <Link
-                                            to="/" onClick={handleLinkClick}>
-                                            <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
-                                        </Link>
-                                    </div>
-                                    <div className='arrow-load'>
-                                        <Link
-                                            to="/about-me" onClick={handleLinkClick}>
-                                            <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
-                                        </Link>
-                                    </div>
-                                </div>
+                            <div className={`code-text ${showText3 ? 'show-code' : ''}`}>
+                                <Typewriter
+                                    options={{
+                                        strings: ['ls skills', ""],
+                                        autoStart: true,
+                                        loop: false,
+                                        pauseFor: 10000000,
+                                        delay: 200,
+                                        deleteSpeed: 1,
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                WordPress
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                PrestaShop
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Vercel
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                AWS
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Google API
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Looker Studio
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Docker
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Xampp
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                MySQL
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                MongoDB
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                SQLite
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                PostgressSQL
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                PHP
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Javascript
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Python
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                JSON
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Bootstrap
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Tailwind
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                React
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Vue
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Nodejs
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Laravel
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Flask
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                FastAPI
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Figma
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Git
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Team Work
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Notion
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Scrum
+                            </div>
+                        </div>
+                        <div className="pt-4 pb-2 d-flex justify-content-center">
+                            <div className='arrow-load pe-5'>
+                                <Link
+                                    to="/" onClick={handleLinkClickBack}>
+                                    <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
+                                </Link>
+                            </div>
+                            <div className='arrow-load'>
+                                <Link
+                                    to="/skills" onClick={handleLinkClickNext}>
+                                    <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
+                                </Link>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
