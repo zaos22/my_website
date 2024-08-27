@@ -21,8 +21,12 @@ function Education() {
 
     let location = useLocation();
     useEffect(() => {
+        gsap.fromTo(".education-1", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0.5 });
+        gsap.fromTo(".education-2", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 1 });
+        gsap.fromTo(".education-3", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 1.5 });
+        gsap.fromTo(".education-4", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 2 });
         gsap.fromTo(".content-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0, duration: 2 });
-        gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 5 });
+        gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 3.5 });
     }, [location]);
 
     const handleLinkClickNext = (e) => {
@@ -63,7 +67,7 @@ function Education() {
                     </div>
                     <div className="container px-2 mt-4 mb-4 text">
                         <div className="row g-0">
-                            <div className="col-12 col-md-6 p-3 text-center">
+                            <div className="col-12 col-md-6 p-3 text-center education-1">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
                                     Cross play Application Development
                                 </div>
@@ -74,7 +78,7 @@ function Education() {
                                     IES Joan Coromines
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 p-3 text-center">
+                            <div className="col-12 col-md-6 p-3 text-center education-2">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
                                     Web Applications Development
                                 </div>
@@ -85,9 +89,10 @@ function Education() {
                                     Institut Montsià
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 p-3 text-center">
+                            <div className="col-12 col-md-6 p-3 text-center education-3">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
-                                    Microcomputer Systems & Network Technician                                </div>
+                                    Microcomputer Systems & Network Technician
+                                </div>
                                 <div className={`year-education ${showText2 ? 'show-text' : ''}`}>
                                     2019-2021
                                 </div>
@@ -95,7 +100,7 @@ function Education() {
                                     IES Joan Coromines
                                 </div>
                             </div>
-                            <div className="col-12 col-md-6 p-3 text-center">
+                            <div className="col-12 col-md-6 p-3 text-center education-4">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
                                     Compulsory Secondary Education
                                 </div>
