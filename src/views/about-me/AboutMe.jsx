@@ -64,12 +64,14 @@ function AboutMe() {
                             <div className='dot3 mt-2 ms-1 me-3' />
                         </div>
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-sm'
                             type="text"
                             defaultValue={url}
                             disabled={true}
                         />
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-lg'
                             type="text"
                             defaultValue={url}
@@ -134,12 +136,14 @@ function AboutMe() {
                                 <div className="pt-4 pb-2 d-flex justify-content-center">
                                     <div className='arrow-load pe-5'>
                                         <Link
+                                            aria-label="Go back"
                                             to="/" onClick={handleLinkClickBack}>
                                             <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                         </Link>
                                     </div>
                                     <div className='arrow-load'>
                                         <Link
+                                            aria-label="Go next"
                                             to="/skills" onClick={handleLinkClickNext}>
                                             <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                         </Link>

@@ -110,12 +110,14 @@ function Education() {
                         <div className="pt-4 pb-2 d-flex justify-content-center">
                             <div className='arrow-load pe-5'>
                                 <Link
+                                    aria-label="Go back"
                                     to="/skills" onClick={handleLinkClickBack}>
                                     <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                 </Link>
                             </div>
                             <div className='arrow-load'>
                                 <Link
+                                    aria-label="Go next"
                                     to="/experience" onClick={handleLinkClickNext}>
                                     <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                 </Link>

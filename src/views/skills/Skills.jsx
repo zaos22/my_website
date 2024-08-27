@@ -64,14 +64,14 @@ function Skills() {
                         </div>
                         <div className='window-top-bar'>
                             <p>
-                                <RiFolderLockFill color="pink" /> skills — -zsh — 106x33
+                                <RiFolderLockFill color="pink" /> skills -zsh —1001x301
                             </p>
                         </div>/
                     </div>
                     <div className="container px-2 mt-4 mb-4">
                         <div className="d-flex">
                             <div className={`console-text ${showText1 ? 'show-text' : ''}`}>
-                                zaos@Zaos—MacBook—Air ~ %
+                                zaos@Zaos—MacBook—Air~%
                             </div>
                             <div className={`code-text ${showText3 ? 'show-code' : ''}`}>
                                 <Typewriter
@@ -186,12 +186,14 @@ function Skills() {
                         <div className="pt-4 pb-2 d-flex justify-content-center">
                             <div className='arrow-load pe-5'>
                                 <Link
+                                    aria-label="Go back"
                                     to="/" onClick={handleLinkClickBack}>
                                     <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                 </Link>
                             </div>
                             <div className='arrow-load'>
                                 <Link
+                                    aria-label="Go next"
                                     to="/skills" onClick={handleLinkClickNext}>
                                     <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                 </Link>
