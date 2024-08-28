@@ -28,24 +28,6 @@ function Resume() {
         gsap.fromTo(".label-bar-load", { opacity: 0, x: 0, y: -20 }, { opacity: 1, x: 0, y: 0, duration: 1 });
     }, [location]);
 
-    const handleLinkClickNext = (e) => {
-        e.preventDefault();
-        gsap.to(".exp1-load", { opacity: 0, x: -100, y: 0, duration: 0.5 });
-        gsap.to(".exp2-load", { opacity: 0, x: 100, y: 0, duration: 1 });
-        gsap.to(".exp3-load", { opacity: 0, x: -100, y: 0, duration: 1.5 });
-        gsap.to(".exp4-load", { opacity: 0, x: 100, y: 0, duration: 2 });
-        gsap.to(".exp5-load", { opacity: 0, x: 0, y: 100, duration: 2.5 });
-        gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
-        gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
-        gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: -100, y: 0, duration: 2 });
-        gsap.to(".arrow-load", {
-            opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
-                navigate("/resume");
-            }
-        });
-    };
-
     const handleLinkClickBack = (e) => {
         e.preventDefault();
         gsap.to(".btn1-load", { opacity: 0, x: 100, y: 0, duration: 1 });
@@ -56,7 +38,7 @@ function Resume() {
         gsap.to(".content-load", { opacity: 0, x: 100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
-                navigate("/education");
+                navigate("/experience");
             }
         });
     };
@@ -136,18 +118,11 @@ function Resume() {
                                 </div>
                             </div>
                             <div className="space-arrow d-flex justify-content-center">
-                                <div className='arrow-load pe-5'>
-                                    <Link
-                                        aria-label="Go back"
-                                        to="/education" onClick={handleLinkClickBack}>
-                                        <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
-                                    </Link>
-                                </div>
                                 <div className='arrow-load'>
                                     <Link
-                                        aria-label="Go next"
-                                        to="/resume" onClick={handleLinkClickNext}>
-                                        <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
+                                        aria-label="Go back"
+                                        to="/experience" onClick={handleLinkClickBack}>
+                                        <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                     </Link>
                                 </div>
                             </div>
