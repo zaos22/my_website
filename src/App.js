@@ -4,6 +4,7 @@ import Home from './views/home/Home';
 import AboutMe from './views/about-me/AboutMe';
 import Skills from './views/skills/Skills';
 import Education from './views/education/Education';
+import Experience from './views/experience/Experience';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path='/about-me' element={<AboutMe />} />
             <Route path='/skills' element={<Skills />} />
             <Route path='/education' element={<Education />} />
+            <Route path='/experience' element={<Experience />} />
           </Routes>
         </Router>
       </div>
