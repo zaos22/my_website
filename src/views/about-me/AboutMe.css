@@ -71,7 +71,7 @@
 
 /* Box Center Template */
 .center-box-about-me {
-  background: url("../../img/backgorund-image2.gif") no-repeat center fixed;
+  background: url("../../img/background-image2.gif") no-repeat center fixed;
   object-fit: cover;
   background-size: cover;
   box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8);
