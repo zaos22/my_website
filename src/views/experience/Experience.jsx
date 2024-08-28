@@ -41,7 +41,7 @@ function Experience() {
         gsap.to(".content-load", { opacity: 0, x: -100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
-                navigate("/projects");
+                navigate("/resume");
             }
         });
     };
@@ -261,14 +261,14 @@ function Experience() {
                                 <div className='arrow-load pe-5'>
                                     <Link
                                         aria-label="Go back"
-                                        to="/" onClick={handleLinkClickBack}>
+                                        to="/education" onClick={handleLinkClickBack}>
                                         <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                     </Link>
                                 </div>
                                 <div className='arrow-load'>
                                     <Link
                                         aria-label="Go next"
-                                        to="/skills" onClick={handleLinkClickNext}>
+                                        to="/resume" onClick={handleLinkClickNext}>
                                         <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                     </Link>
                                 </div>
