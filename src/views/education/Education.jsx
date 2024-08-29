@@ -5,9 +5,13 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { ImBooks } from "react-icons/im";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import './Education.css';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function Education() {
     const navigate = useNavigate();
+
+    const { t } = useTranslation();
 
     const [showText2, setShowText2] = useState(false);
 
@@ -52,6 +56,9 @@ function Education() {
     return (
         <div className="education">
             <div className="education-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-education'>
                     <div className='top-bar-education'>
                         <div className='dots-container'>
@@ -61,15 +68,15 @@ function Education() {
                         </div>
                         <div className='window-top-bar'>
                             <p>
-                                <ImBooks color="pink" /> Education Background
+                                <ImBooks color="pink" /> {t('education')}
                             </p>
-                        </div>/
+                        </div>
                     </div>
                     <div className="container px-2 mt-4 mb-4 text">
                         <div className="row g-0">
                             <div className="col-12 col-md-6 p-3 text-center education-1">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
-                                    Cross play Application Development
+                                    {t('education_1')}
                                 </div>
                                 <div className={`year-education ${showText2 ? 'show-text' : ''}`}>
                                     2023-2024
@@ -80,7 +87,7 @@ function Education() {
                             </div>
                             <div className="col-12 col-md-6 p-3 text-center education-2">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
-                                    Web Applications Development
+                                    {t('education_2')}
                                 </div>
                                 <div className={`year-education ${showText2 ? 'show-text' : ''}`}>
                                     2021-2023
@@ -91,7 +98,7 @@ function Education() {
                             </div>
                             <div className="col-12 col-md-6 p-3 text-center education-3">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
-                                    Microcomputer Systems & Network Technician
+                                    {t('education_3')}
                                 </div>
                                 <div className={`year-education ${showText2 ? 'show-text' : ''}`}>
                                     2019-2021
@@ -102,7 +109,7 @@ function Education() {
                             </div>
                             <div className="col-12 col-md-6 p-3 text-center education-4">
                                 <div className={`title-education ${showText2 ? 'show-text' : ''}`}>
-                                    Compulsory Secondary Education
+                                    {t('education_4')}
                                 </div>
                                 <div className={`year-education ${showText2 ? 'show-text' : ''}`}>
                                     2014-2019

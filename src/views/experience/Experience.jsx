@@ -9,10 +9,15 @@ import './Experience.css';
 import ProgressLine from '../../components/ProgressLine';
 import Tooltip from 'react-bootstrap/Tooltip';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function Experience() {
     const url = 'https://zaos-website.com/experience';
     const navigate = useNavigate();
+
+
+    const { t } = useTranslation();
 
     let location = useLocation();
     useEffect(() => {
@@ -68,6 +73,9 @@ function Experience() {
     return (
         <div className="experience">
             <div className="experience-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-experience'>
                     <div className='top-bar'>
                         <div className='dots-container'>
@@ -104,7 +112,7 @@ function Experience() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load">
-                                            <h6 className='progress-text'>My Experience!</h6>
+                                            <h6 className='progress-text'>{t('my_experience')}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -132,14 +140,14 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>Working with AI</li>
-                                                                    <li>Data Analysis</li>
-                                                                    <li>Data Review</li>
+                                                                    <li>{t('fun__exp1_1')}</li>
+                                                                    <li>{t('fun__exp1_2')}</li>
+                                                                    <li>{t('fun__exp1_3')}</li>
                                                                 </ul>
                                                             </Tooltip>
                                                         )}
                                                         placement="bottom"
-                                                    ><div className="title-exp">Data Analyst</div>
+                                                    ><div className="title-exp">{t('experience_1')}</div>
                                                     </OverlayTrigger>
                                                 </div>
                                                 <div className="when-exp">
@@ -156,15 +164,15 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>Place products</li>
-                                                                    <li>Stock Review</li>
-                                                                    <li>Add new products</li>
-                                                                    <li>Branding First</li>
+                                                                    <li>{t('fun__exp2_1')}</li>
+                                                                    <li>{t('fun__exp2_2')}</li>
+                                                                    <li>{t('fun__exp2_3')}</li>
+                                                                    <li>{t('fun__exp2_4')}</li>
                                                                 </ul>
                                                             </Tooltip>
                                                         )}
                                                         placement="bottom"
-                                                    ><div className="title-exp">Night Stocker</div>
+                                                    ><div className="title-exp">{t('experience_2')}</div>
                                                     </OverlayTrigger>
                                                 </div>
                                                 <div className="when-exp">
@@ -181,7 +189,7 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>Worked with Laravel</li>
+                                                                    <li>{t('worked_with')} Laravel</li>
                                                                     <li>Python</li>
                                                                     <li>NodeJS</li>
                                                                     <li>Looker Studio</li>
@@ -191,7 +199,7 @@ function Experience() {
                                                             </Tooltip>
                                                         )}
                                                         placement="bottom"
-                                                    ><div className="title-exp">Web Developer</div>
+                                                    ><div className="title-exp">{t('experience_3')}</div>
                                                     </OverlayTrigger>
                                                 </div>
                                                 <div className="when-exp">
@@ -208,16 +216,16 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>Worked with Laravel</li>
+                                                                    <li>{t('worked_with')} Laravel</li>
                                                                     <li>VueJS</li>
                                                                     <li>Bootstrap</li>
-                                                                    <li>App Maintenance</li>
-                                                                    <li>New Features</li>
+                                                                    <li>{t('fun__exp4_1')}</li>
+                                                                    <li>{t('fun__exp4_2')}</li>
                                                                 </ul>
                                                             </Tooltip>
                                                         )}
                                                         placement="bottom"
-                                                    ><div className="title-exp">Web Developer</div>
+                                                    ><div className="title-exp">{t('experience_4')}</div>
                                                     </OverlayTrigger>
                                                 </div>
                                                 <div className="when-exp">
@@ -234,7 +242,7 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>Worked with WordPress</li>
+                                                                    <li>{t('worked_with')} WordPress</li>
                                                                     <li>PrestaShop</li>
                                                                     <li>PhotoShop</li>
                                                                     <li>Gimp</li>
@@ -243,7 +251,7 @@ function Experience() {
                                                             </Tooltip>
                                                         )}
                                                         placement="bottom"
-                                                    ><div className="title-exp">Web Designer</div>
+                                                    ><div className="title-exp">{t('experience_5')}</div>
                                                     </OverlayTrigger>
                                                 </div>
                                                 <div className="when-exp">
