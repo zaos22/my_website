@@ -32,34 +32,15 @@
   padding: 0;
 }
 
-/* Arrow Next */
-.next-arrow {
-  font-size: 30px;
-  color: rgb(33, 150, 243);
-}
+/* Arrow Back */
 
 .back-arrow {
   font-size: 30px;
   color: rgb(33, 150, 243);
 }
 
-.next-arrow-bounce {
-  display: inline-block;
-  animation: bounce 3s ease-in-out infinite;
-  animation-delay: calc(var(--animation-order) * 3s);
-}
-
-.next-arrow:hover {
-  filter: drop-shadow(0px 0px 2px #00000081);
-}
-
 .back-arrow:hover {
   filter: drop-shadow(0px 0px 2px #00000081);
-}
-
-.space-arrow {
-  padding-top: 10px;
-  padding-bottom: 30px;
 }
 
 /* Image Circle Background */
@@ -83,16 +64,143 @@
   padding: 10px;
 }
 
+/* Btn CSS */
+.btn-mail {
+  align-items: center;
+  background: url("../../img/background-image8.gif") no-repeat center fixed;
+  object-fit: cover;
+  background-size: cover;
+  width: 50%;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-mail:after {
+  background-color: #ffffff;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.btn-mail:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn-mail:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btn-mail:hover {
+  outline: 0;
+}
+
+/* Btn CSS */
+.btn-github {
+  align-items: center;
+  background: url("../../img/background-image7.gif") no-repeat center fixed;
+  object-fit: cover;
+  background-size: cover;
+  width: 50%;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 14px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btn-github:after {
+  background-color: #ffffff;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.btn-github:hover:after {
+  transform: translate(0, 0);
+}
+
+.btn-github:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.btn-github:hover {
+  outline: 0;
+}
+
 /* Responsive Home */
 @media only screen and (min-width: 1224px) {
+  .btn-github {
+    width: 50px;
+    height: 70px;
+    padding: 0 40px;
+  }
+
+  .btn-github:after {
+    height: 70px;
+  }
+
+  .btn-mail {
+    width: 50px;
+    height: 70px;
+    padding: 0 40px;
+  }
+
+  .btn-mail:after {
+    height: 70px;
+  }
+
   /* Meta Info */
   .meta-info-resume {
     padding-top: 50px;
-  }
-
-  .space-arrow {
-    padding-top: 10px;
-    padding-bottom: 10px;
   }
 
   .center-box-resume {

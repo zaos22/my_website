@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import { MdArrowForwardIos } from "react-icons/md";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import defaultIconLg from '../../img/default-profile-icon-lg.png';
 import defaultIconSm from '../../img/default-profile-icon-sm.png';
@@ -16,22 +15,19 @@ function Resume() {
 
     let location = useLocation();
     useEffect(() => {
-        gsap.fromTo(".exp1-load", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 0.5 });
-        gsap.fromTo(".exp2-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1 });
-        gsap.fromTo(".exp3-load", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1.5 });
-        gsap.fromTo(".exp4-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 2 });
-        gsap.fromTo(".exp5-load", { opacity: 0, x: 0, y: -100 }, { opacity: 1, x: 0, y: 0, duration: 2.5 });
+        gsap.fromTo(".btn1-load", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1 });
+        gsap.fromTo(".btn2-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1.5 });
         gsap.fromTo(".img-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, delay: 0.5, duration: 1 });
         gsap.fromTo(".content-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0, duration: 2 });
-        gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 3.5 });
+        gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 2 });
         gsap.fromTo(".progress-load", { opacity: 0, x: 0, y: 50 }, { opacity: 1, x: 0, y: 0, duration: 1 });
         gsap.fromTo(".label-bar-load", { opacity: 0, x: 0, y: -20 }, { opacity: 1, x: 0, y: 0, duration: 1 });
     }, [location]);
 
     const handleLinkClickBack = (e) => {
         e.preventDefault();
-        gsap.to(".btn1-load", { opacity: 0, x: 100, y: 0, duration: 1 });
-        gsap.to(".btn2-load", { opacity: 0, x: -100, y: 0, duration: 1.5 });
+        gsap.to(".btn1-load", { opacity: 0, x: -100, y: 0, duration: 1 });
+        gsap.to(".btn2-load", { opacity: 0, x: 100, y: 0, duration: 1.5 });
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
@@ -97,18 +93,30 @@ function Resume() {
                                             />
                                         </div>
                                     </div>
+                                    <div className="row g-0">
+                                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                                            <div className='p-3'>
+                                                <a target="blank" href="https://github.com/zaos22" className="btn-github" aria-label='Check my GitHub'></a>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                                            <div className='p-3'>
+                                                <a href="mailto:ozazou2001@gmail.com" className="btn-mail" aria-label='Contact me via mail'></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div className="col-12 col-md-8 top-info">
                                 <div className="info-container">
                                     <div className='info-align-resume fw-bold'>
                                         <div className="row g-0 meta-info-resume">
-                                            <div className="col-12 col-md-6 pe-3 text-center exp1-load">
+                                            <div className="col-12 col-md-6 text-center btn1-load">
                                                 <Doc
                                                     downloadLink="docs/My_CV.pdf"
                                                 />
                                             </div>
-                                            <div className="col-12 col-md-6 text-center exp2-load">
+                                            <div className="col-12 col-md-6 text-center btn2-load">
                                                 <Doc2
                                                     downloadLink="docs/My_CV.pdf"
                                                 />
@@ -116,9 +124,7 @@ function Resume() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="space-arrow d-flex justify-content-center">
-                                <div className='arrow-load'>
+                                <div className="pt-4 pb-2 text-center arrow-load">
                                     <Link
                                         aria-label="Go back"
                                         to="/experience" onClick={handleLinkClickBack}>
