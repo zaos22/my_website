@@ -5,6 +5,7 @@ import AboutMe from './views/about-me/AboutMe';
 import Skills from './views/skills/Skills';
 import Education from './views/education/Education';
 import Experience from './views/experience/Experience';
+import Resume from './views/resume/Resume';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path='/skills' element={<Skills />} />
             <Route path='/education' element={<Education />} />
             <Route path='/experience' element={<Experience />} />
+            <Route path='/resume' element={<Resume />} />
           </Routes>
         </Router>
       </div>
