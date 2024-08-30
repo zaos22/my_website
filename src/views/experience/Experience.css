@@ -58,7 +58,7 @@
   padding: 0;
 }
 
-/* Arrow Next */
+/* Arrows */
 .next-arrow {
   font-size: 30px;
   color: rgb(33, 150, 243);
@@ -109,7 +109,7 @@
   padding: 10px;
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   /* Title Education */
   .title-exp {

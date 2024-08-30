@@ -1,4 +1,4 @@
-/* Home CSS */
+/* About me CSS */
 .about-me {
   position: relative;
   background: url("../../img/Background-image2.jpg") no-repeat center fixed;
@@ -39,7 +39,7 @@
   padding: 0;
 }
 
-/* Arrow Next */
+/* Arrows */
 .next-arrow {
   font-size: 30px;
   color: rgb(33, 150, 243);
@@ -96,7 +96,7 @@
   padding: 0px;
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   /* Meta Info */
   .meta-info-about-me {

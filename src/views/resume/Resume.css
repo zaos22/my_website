@@ -232,7 +232,7 @@
   outline: 0;
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   .btn-github {
     width: 50px;

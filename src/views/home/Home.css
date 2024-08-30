@@ -124,7 +124,7 @@
   padding: 0;
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1024px) {
   .title-lg {
     display: block;
@@ -140,7 +140,7 @@
   }
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   .title-lg {
     display: block;
