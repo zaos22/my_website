@@ -1,0 +1,26 @@
+.app-container {
+  background-color: #fadacd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.rocket-animation {
+  /* Agrega estilos para la animación del cohete aquí */
+  animation: rocketAnimation 2s infinite;
+}
+
+@keyframes rocketAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

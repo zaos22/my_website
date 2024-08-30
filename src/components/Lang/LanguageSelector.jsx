@@ -33,6 +33,7 @@ function LanguageSelector() {
           onChange={(e) => changeLanguage(e.target.value)}
           defaultValue={i18n.language}
           className="language-selector"
+          aria-label="Select your language"
         >
           <option value="en">EN</option>
           <option value="es">ES</option>
