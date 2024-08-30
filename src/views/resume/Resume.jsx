@@ -15,8 +15,9 @@ function Resume() {
 
     let location = useLocation();
     useEffect(() => {
-        gsap.fromTo(".btn1-load", { opacity: 0, x: -100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1 });
-        gsap.fromTo(".btn2-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, duration: 1.5 });
+        gsap.fromTo(".btn1-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, duration: 1 });
+        gsap.fromTo(".btn2-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, duration: 1.5 });
+        gsap.fromTo(".btn3-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, duration: 2 });
         gsap.fromTo(".img-load", { opacity: 0, x: 0, y: 100 }, { opacity: 1, x: 0, y: 0, delay: 0.5, duration: 1 });
         gsap.fromTo(".content-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 0, duration: 2 });
         gsap.fromTo(".arrow-load", { opacity: 0, x: 100, y: 0 }, { opacity: 1, x: 0, y: 0, delay: 2 });
@@ -26,8 +27,9 @@ function Resume() {
 
     const handleLinkClickBack = (e) => {
         e.preventDefault();
-        gsap.to(".btn1-load", { opacity: 0, x: -100, y: 0, duration: 1 });
-        gsap.to(".btn2-load", { opacity: 0, x: 100, y: 0, duration: 1.5 });
+        gsap.to(".btn1-load", { opacity: 0, x: 0, y: 100, duration: 1 });
+        gsap.to(".btn2-load", { opacity: 0, x: 0, y: 100, duration: 1.5 });
+        gsap.to(".btn3-load", { opacity: 0, x: 0, y: 100, duration: 2 });
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
@@ -39,7 +41,45 @@ function Resume() {
         });
     };
 
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const currentLanguage = i18n.language;
+
+    const renderDownloadButton = () => {
+        switch (currentLanguage) {
+            case 'es':
+                return (
+                    <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
+                        <div className='p-3'>
+                            <a href="docs/MyCV_es.pdf" className="btn-download" aria-label='Descarga mi curriculum en español' download></a>
+                        </div>
+                    </div>
+                );
+            case 'ca':
+                return (
+                    <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
+                        <div className='p-3'>
+                            <a href="docs/MyCV_ca.pdf" className="btn-download" aria-label="Descarrega't el meu currículum en català" download></a>
+                        </div>
+                    </div>
+                );
+            case 'de':
+                return (
+                    <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
+                        <div className='p-3'>
+                            <a href="docs/MyCV_de.pdf" className="btn-download" aria-label='Laden Sie meinen Lebenslauf auf Deutsch herunter' download></a>
+                        </div>
+                    </div>
+                );
+            default:
+                return (
+                    <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
+                        <div className='p-3'>
+                            <a href="docs/MyCV_en.pdf" className="btn-download" aria-label='Download my resume in English' download></a>
+                        </div>
+                    </div>
+                );
+        }
+    };
 
     return (
         <div className="resume">
@@ -106,11 +146,7 @@ function Resume() {
                                                 <a href="mailto:ozazou2001@gmail.com" className="btn-mail" aria-label='Contact me via mail'></a>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
-                                            <div className='p-3'>
-                                            <a href="docs/My_CV.pdf" className="btn-download" aria-label='Download my resume' download></a>
-                                            </div>
-                                        </div>
+                                        {renderDownloadButton()}
                                     </div>
                                 </div>
                             </div>

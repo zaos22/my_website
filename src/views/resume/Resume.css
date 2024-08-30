@@ -33,7 +33,6 @@
 }
 
 /* Arrow Back */
-
 .back-arrow {
   font-size: 30px;
   color: rgb(33, 150, 243);
@@ -93,7 +92,7 @@
 }
 
 .btn-download:after {
-  background-color: #ffffff;
+  background-color: #f5fbca;
   border-radius: 8px;
   content: "";
   display: block;
@@ -112,7 +111,7 @@
 }
 
 .btn-download:active {
-  background-color: #ffdeda;
+  background-color: #f5fbca;
   outline: 0;
 }
 
@@ -149,7 +148,7 @@
 }
 
 .btn-mail:after {
-  background-color: #ffffff;
+  background-color: #f5fbca;
   border-radius: 8px;
   content: "";
   display: block;
@@ -168,7 +167,7 @@
 }
 
 .btn-mail:active {
-  background-color: #ffdeda;
+  background-color: #f5fbca;
   outline: 0;
 }
 
@@ -205,7 +204,7 @@
 }
 
 .btn-github:after {
-  background-color: #ffffff;
+  background-color: #f5fbca;
   border-radius: 8px;
   content: "";
   display: block;
@@ -224,7 +223,7 @@
 }
 
 .btn-github:active {
-  background-color: #ffdeda;
+  background-color: #f5fbca;
   outline: 0;
 }
 
