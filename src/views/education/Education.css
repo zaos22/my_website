@@ -5,14 +5,14 @@
   position: relative;
   background-color: #aac95b;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow-x: hidden;
 }
 
 .education-align {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
   overflow-x: hidden;
 }
 

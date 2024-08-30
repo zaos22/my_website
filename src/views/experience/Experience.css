@@ -2,14 +2,14 @@
 .experience {
   background-color: #cfcfcf;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow-x: hidden;
 }
 
 .experience-align {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 150vb;
   overflow-x: hidden;
 }
 

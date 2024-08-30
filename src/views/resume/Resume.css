@@ -2,14 +2,14 @@
 .resume {
   background-color: #f5fbca;
   width: 100%;
-  height: 100vh;
+  height: auto;
   overflow-x: hidden;
 }
 
 .resume-align {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   overflow-x: hidden;
 }
 

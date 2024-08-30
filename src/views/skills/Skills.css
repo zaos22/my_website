@@ -33,7 +33,7 @@
 /* Console text*/
 .console-text {
   color: yellow;
-  font-size: 12px;
+  font-size: 10px;
   padding-right: 5px;
   opacity: 0;
 }
@@ -58,7 +58,7 @@
 /* Code text*/
 .code-text {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   opacity: 0;
 }
 
