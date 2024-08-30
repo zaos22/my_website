@@ -9,10 +9,15 @@ import Typewriter from 'typewriter-effect';
 import './AboutMe.css';
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import ProgressLine from '../../components/ProgressLine';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function AboutMe() {
     const url = 'https://zaos-website.com/about-me';
     const navigate = useNavigate();
+
+    const { t } = useTranslation();
+    const translatedAboutMe = t('about_me_long');
 
     let location = useLocation();
     useEffect(() => {
@@ -30,7 +35,7 @@ function AboutMe() {
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
+        gsap.to(".content-load", { opacity: 0, x: -100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
                 navigate("/skills");
@@ -44,7 +49,7 @@ function AboutMe() {
         gsap.to(".progress-load", { opacity: 0, x: 0, y: 50, duration: 1 });
         gsap.to(".label-bar-load", { opacity: 0, x: 0, y: -20, duration: 1.5 });
         gsap.to(".img-load", { opacity: 0, x: 0, y: 100, duration: 0.5 });
-        gsap.to(".content-load", { opacity: 0, x: 0, y: 0, duration: 3 });
+        gsap.to(".content-load", { opacity: 0, x: 100, y: 0, duration: 2 });
         gsap.to(".arrow-load", {
             opacity: 0, x: -100, y: 0, delay: 0.5, onComplete: () => {
                 navigate("/");
@@ -56,6 +61,9 @@ function AboutMe() {
     return (
         <div className="about-me">
             <div className="about-me-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-about-me'>
                     <div className='top-bar'>
                         <div className='dots-container'>
@@ -64,12 +72,14 @@ function AboutMe() {
                             <div className='dot3 mt-2 ms-1 me-3' />
                         </div>
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-sm'
                             type="text"
                             defaultValue={url}
                             disabled={true}
                         />
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-lg'
                             type="text"
                             defaultValue={url}
@@ -90,7 +100,7 @@ function AboutMe() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load">
-                                            <h6 className='progress-text'>About me!</h6>
+                                            <h6 className='progress-text'>{t('about_me')}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -116,7 +126,7 @@ function AboutMe() {
                                             <div className='pt-1 meta-info-about-me'>
                                                 <Typewriter
                                                     options={{
-                                                        strings: ['I am Oussama Zazou Abid, also known as "Zaos." I am a committed and enthusiastic individual, eager to learn and contribute in dynamic environments. Through various internships, I have gained programming experience and developed skills in multiple programming languages. I bring value to the team with my technical expertise, dedication, and adaptability to diverse projects and challenges.', ""],
+                                                        strings: [translatedAboutMe, ""],
                                                         autoStart: true,
                                                         loop: false,
                                                         pauseFor: 10000000,
@@ -134,12 +144,14 @@ function AboutMe() {
                                 <div className="pt-4 pb-2 d-flex justify-content-center">
                                     <div className='arrow-load pe-5'>
                                         <Link
+                                            aria-label="Go back"
                                             to="/" onClick={handleLinkClickBack}>
                                             <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
                                         </Link>
                                     </div>
                                     <div className='arrow-load'>
                                         <Link
+                                            aria-label="Go next"
                                             to="/skills" onClick={handleLinkClickNext}>
                                             <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                         </Link>

@@ -7,10 +7,16 @@ import defaultIconSm from '../../img/default-profile-icon-sm.png';
 import ProgressLine from '../../components/ProgressLine';
 import Typewriter from 'typewriter-effect';
 import './Home.css';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function Home() {
     const url = 'https://zaos-website.com/';
     const navigate = useNavigate();
+
+    const { t } = useTranslation();
+    const translatedWelcome = t('welcome');
+    const translatedWelcomeLong = t('welcome_long');
 
     let location = useLocation();
     useEffect(() => {
@@ -40,6 +46,9 @@ function Home() {
     return (
         <div className="home">
             <div className="home-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-home'>
                     <div className='top-bar'>
                         <div className='dots-container'>
@@ -48,12 +57,14 @@ function Home() {
                             <div className='dot3 mt-2 ms-1 me-3' />
                         </div>
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-sm'
                             type="text"
                             defaultValue={url}
                             disabled={true}
                         />
                         <input
+                            aria-label="Page link"
                             className='input-top-bar-lg'
                             type="text"
                             defaultValue={url}
@@ -74,7 +85,7 @@ function Home() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load">
-                                            <h6 className='progress-text'>Let's start!</h6>
+                                            <h6 className='progress-text'>{t("let's_start")}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -95,7 +106,7 @@ function Home() {
                                     <div className=''>
                                         <div className='info-align-home text-center'>
                                             <p className='pt-5 title-lg text-center fw-bold title-load'>
-                                                {Array.from("Welcome to my web page!").map((char, index) => (
+                                                {Array.from(translatedWelcomeLong).map((char, index) => (
                                                     <span
                                                         key={index}
                                                         className={`bounce-letter letter-${index}`}
@@ -106,7 +117,7 @@ function Home() {
                                                 ))}
                                             </p>
                                             <p className='title-sm text-center fw-bold title-load'>
-                                                {Array.from("Welcome!").map((char, index) => (
+                                                {Array.from(translatedWelcome).map((char, index) => (
                                                     <span
                                                         key={index}
                                                         className={`bounce-letter letter-${index}`}
@@ -130,6 +141,7 @@ function Home() {
                                 </div>
                                 <div className='pt-4 pb-2 text-center arrow-load'>
                                     <Link
+                                        aria-label="Go next"
                                         to="/about-me" onClick={handleLinkClick}>
                                         <MdArrowForwardIos className='next-arrow next-arrow-bounce' />
                                     </Link>

@@ -66,7 +66,7 @@
 
 /* Box Center Template */
 .center-box-home {
-  background: url("../../img/backgorund-image.gif") no-repeat center fixed;
+  background: url("../../img/background-image.gif") no-repeat center fixed;
   object-fit: cover;
   background-size: cover;
   box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8);
@@ -124,7 +124,7 @@
   padding: 0;
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1024px) {
   .title-lg {
     display: block;
@@ -140,7 +140,7 @@
   }
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   .title-lg {
     display: block;

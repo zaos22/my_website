@@ -33,7 +33,7 @@
 /* Console text*/
 .console-text {
   color: yellow;
-  font-size: 12px;
+  font-size: 10px;
   padding-right: 5px;
   opacity: 0;
 }
@@ -58,7 +58,7 @@
 /* Code text*/
 .code-text {
   color: white;
-  font-size: 12px;
+  font-size: 10px;
   opacity: 0;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .center-box-skills {
-  background: url("../../img/backgorund-image3.gif") no-repeat center fixed;
+  background: url("../../img/background-image3.gif") no-repeat center fixed;
   object-fit: cover;
   background-size: cover;
   box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.8);
