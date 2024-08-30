@@ -6,6 +6,7 @@ import Skills from './views/skills/Skills';
 import Education from './views/education/Education';
 import Experience from './views/experience/Experience';
 import Resume from './views/resume/Resume';
+import './lang';
 
 function App() {
   return (

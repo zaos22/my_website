@@ -60,7 +60,7 @@
   font-size: 12px;
 }
 
-/* Arrow Next */
+/* Arrows */
 .next-arrow {
   font-size: 30px;
   color: rgb(33, 150, 243);
@@ -99,7 +99,7 @@
   transform: translate(-50%, -50%);
 }
 
-/* Responsive Home */
+/* Responsive */
 @media only screen and (min-width: 1224px) {
   /* Title Education */
   .title-education {

@@ -9,10 +9,15 @@ import Typewriter from 'typewriter-effect';
 import './AboutMe.css';
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
 import ProgressLine from '../../components/ProgressLine';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function AboutMe() {
     const url = 'https://zaos-website.com/about-me';
     const navigate = useNavigate();
+
+    const { t } = useTranslation();
+    const translatedAboutMe = t('about_me_long');
 
     let location = useLocation();
     useEffect(() => {
@@ -56,6 +61,9 @@ function AboutMe() {
     return (
         <div className="about-me">
             <div className="about-me-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-about-me'>
                     <div className='top-bar'>
                         <div className='dots-container'>
@@ -92,7 +100,7 @@ function AboutMe() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load">
-                                            <h6 className='progress-text'>About me!</h6>
+                                            <h6 className='progress-text'>{t('about_me')}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -118,7 +126,7 @@ function AboutMe() {
                                             <div className='pt-1 meta-info-about-me'>
                                                 <Typewriter
                                                     options={{
-                                                        strings: ['I am Oussama Zazou Abid, also known as "Zaos." I am a committed and enthusiastic individual, eager to learn and contribute in dynamic environments. Through various internships, I have gained programming experience and developed skills in multiple programming languages. I bring value to the team with my technical expertise, dedication, and adaptability to diverse projects and challenges.', ""],
+                                                        strings: [translatedAboutMe, ""],
                                                         autoStart: true,
                                                         loop: false,
                                                         pauseFor: 10000000,

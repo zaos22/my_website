@@ -6,11 +6,11 @@ import defaultIconLg from '../../img/default-profile-icon-lg.png';
 import defaultIconSm from '../../img/default-profile-icon-sm.png';
 import './Resume.css';
 import ProgressLine from '../../components/ProgressLine';
-import Doc from '../../components/DocsComponent/Download-cv';
-import Doc2 from '../../components/DocsComponent/Download-letter';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from '../../components/Lang/LanguageSelector';
 
 function Resume() {
-    const url = 'https://zaos-website.com/resume';
+    const url = 'https://www.linkedin.com/in/zazou-abid/';
     const navigate = useNavigate();
 
     let location = useLocation();
@@ -39,10 +39,14 @@ function Resume() {
         });
     };
 
+    const { t } = useTranslation();
 
     return (
         <div className="resume">
             <div className="resume-align content-load">
+                <div className="text-end p-2">
+                    <LanguageSelector />
+                </div>
                 <div className='center-box-resume'>
                     <div className='top-bar'>
                         <div className='dots-container'>
@@ -55,19 +59,17 @@ function Resume() {
                             className='input-top-bar-sm'
                             type="text"
                             defaultValue={url}
-                            disabled={true}
                         />
                         <input
                             aria-label="Page link"
                             className='input-top-bar-lg'
                             type="text"
                             defaultValue={url}
-                            disabled={true}
                         />
                     </div>
                     <div className="container px-4 mt-4 mb-4">
                         <div className="row g-0">
-                            <div className="col-12 col-md-4">
+                            <div className="col-12">
                                 <div className="p-3">
                                     <div className='image-icon-container'>
                                         <div className='image-icon image-background-resume'>
@@ -79,7 +81,7 @@ function Resume() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load">
-                                            <h6 className='progress-text'>My Resume!</h6>
+                                            <h6 className='progress-text'>{t("my_resume")}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -94,43 +96,30 @@ function Resume() {
                                         </div>
                                     </div>
                                     <div className="row g-0">
-                                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                                        <div className="col-12 col-md-4 d-flex justify-content-center btn1-load">
                                             <div className='p-3'>
                                                 <a target="blank" href="https://github.com/zaos22" className="btn-github" aria-label='Check my GitHub'></a>
                                             </div>
                                         </div>
-                                        <div className="col-12 col-md-6 d-flex justify-content-center">
+                                        <div className="col-12 col-md-4 d-flex justify-content-center btn2-load">
                                             <div className='p-3'>
                                                 <a href="mailto:ozazou2001@gmail.com" className="btn-mail" aria-label='Contact me via mail'></a>
+                                            </div>
+                                        </div>
+                                        <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
+                                            <div className='p-3'>
+                                            <a href="docs/My_CV.pdf" className="btn-download" aria-label='Download my resume' download></a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-12 col-md-8 top-info">
-                                <div className="info-container">
-                                    <div className='info-align-resume fw-bold'>
-                                        <div className="row g-0 meta-info-resume">
-                                            <div className="col-12 col-md-6 text-center btn1-load">
-                                                <Doc
-                                                    downloadLink="docs/My_CV.pdf"
-                                                />
-                                            </div>
-                                            <div className="col-12 col-md-6 text-center btn2-load">
-                                                <Doc2
-                                                    downloadLink="docs/My_CV.pdf"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pt-4 pb-2 text-center arrow-load">
-                                    <Link
-                                        aria-label="Go back"
-                                        to="/experience" onClick={handleLinkClickBack}>
-                                        <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
-                                    </Link>
-                                </div>
+                            <div className="pt-4 pb-2 text-center arrow-load">
+                                <Link
+                                    aria-label="Go back"
+                                    to="/experience" onClick={handleLinkClickBack}>
+                                    <MdOutlineArrowBackIosNew className='back-arrow next-arrow-bounce' />
+                                </Link>
                             </div>
                         </div>
                     </div>
