@@ -88,23 +88,6 @@ function Skills() {
                         </div>
                         <div className="d-flex">
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                WordPress
-                            </div>
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                PrestaShop
-                            </div>
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                Vercel
-                            </div>
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                AWS
-                            </div>
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                Google API
-                            </div>
-                        </div>
-                        <div className="d-flex">
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
                                 Docker
                             </div>
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
@@ -141,6 +124,23 @@ function Skills() {
                             </div>
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
                                 Tailwind
+                            </div>
+                        </div>
+                        <div className="d-flex">
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                WordPress
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                PrestaShop
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Vercel
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                AWS
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                Google API
                             </div>
                         </div>
                         <div className="d-flex">
