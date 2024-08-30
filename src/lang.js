@@ -10,7 +10,7 @@ const resources = {
             "about_me": "About me!",
             "about_me_long": "I'm Oussama Zazou Abid, also known as Zaos. I'm a Full Stack Developer with experience in frameworks such as React, Laravel, NodeJS, and VueJS. I have worked on bug resolution, process automation, and feature development in agile environments. My focus is on efficiency, teamwork, and delivering high-quality projects.",
             "education": "Education Background",
-            "education_1": "Cross play Application Development",
+            "education_1": "Multi-platform Application Development",
             "education_2": "Web Applications Development",
             "education_3": "Microcomputer Systems & Network Technician",
             "education_4": "Compulsory Secondary Education",
