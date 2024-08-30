@@ -272,4 +272,12 @@
     box-shadow: 20px 100px 300px rgba(0, 0, 0, 0.8);
     transform: translate(-50%, -50%);
   }
+
+  .resume {
+    height: 100vh;
+  }
+
+  .resume-align {
+    height: 100vh;
+  }
 }
