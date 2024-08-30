@@ -91,6 +91,9 @@ function Skills() {
                                 WordPress
                             </div>
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
+                                WP themes
+                            </div>
+                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
                                 PrestaShop
                             </div>
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
@@ -101,9 +104,6 @@ function Skills() {
                             </div>
                             <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
                                 Google API
-                            </div>
-                            <div className={`result-text ${showText2 ? 'show-text' : ''}`}>
-                                Looker Studio
                             </div>
                         </div>
                         <div className="d-flex">
