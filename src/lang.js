@@ -115,7 +115,7 @@ const resources = {
             "fun__exp1_1": "Arbeiten mit KI",
             "fun__exp1_2": "Datenanalyse",
             "fun__exp1_3": "Datenprüfung",
-            "experience_2": "Nachtschichtmitarbeiter",
+            "experience_2": "Nacht Lagerarbeiter",
             "fun__exp2_1": "Produkte platzieren",
             "fun__exp2_2": "Bestandsprüfung",
             "fun__exp2_3": "Neue Produkte hinzufügen",
