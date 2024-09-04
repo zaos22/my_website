@@ -140,30 +140,6 @@ function Experience() {
                                                         overlay={(props) => (
                                                             <Tooltip {...props}>
                                                                 <ul>
-                                                                    <li>{t('fun__exp1_1')}</li>
-                                                                    <li>{t('fun__exp1_2')}</li>
-                                                                    <li>{t('fun__exp1_3')}</li>
-                                                                </ul>
-                                                            </Tooltip>
-                                                        )}
-                                                        placement="bottom"
-                                                    ><div className="title-exp">{t('experience_1')}</div>
-                                                    </OverlayTrigger>
-                                                </div>
-                                                <div className="when-exp">
-                                                    09/2024 - NOW
-                                                </div>
-                                                <div className="company-exp">
-                                                    Volga Partners
-                                                </div>
-                                            </div>
-                                            <div className="col-12 col-md-6 p-3 text-center exp2-load">
-                                                <div>
-                                                    <OverlayTrigger
-                                                        delay={{ hide: 450, show: 300 }}
-                                                        overlay={(props) => (
-                                                            <Tooltip {...props}>
-                                                                <ul>
                                                                     <li>{t('fun__exp2_1')}</li>
                                                                     <li>{t('fun__exp2_2')}</li>
                                                                     <li>{t('fun__exp2_3')}</li>
@@ -182,7 +158,7 @@ function Experience() {
                                                     Family Cash
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-md-6 p-3 text-center exp3-load">
+                                            <div className="col-12 col-md-6 p-3 text-center exp2-load">
                                                 <div>
                                                     <OverlayTrigger
                                                         delay={{ hide: 450, show: 300 }}
@@ -209,7 +185,7 @@ function Experience() {
                                                     Pylon Data
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-md-6 p-3 text-center exp4-load">
+                                            <div className="col-12 col-md-6 p-3 text-center exp3-load">
                                                 <div>
                                                     <OverlayTrigger
                                                         delay={{ hide: 450, show: 300 }}
@@ -235,7 +211,7 @@ function Experience() {
                                                     Empatica.net
                                                 </div>
                                             </div>
-                                            <div className="col-12 col-md-6 p-3 text-center exp5-load">
+                                            <div className="col-12 col-md-6 p-3 text-center exp4-load">
                                                 <div>
                                                     <OverlayTrigger
                                                         delay={{ hide: 450, show: 300 }}
