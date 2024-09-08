@@ -120,7 +120,7 @@ function Resume() {
                                         </div>
                                     </div>
                                     <div className='mt-4'>
-                                        <div className="label-bar-load">
+                                        <div className="label-bar-load text-white">
                                             <h6 className='progress-text'>{t("my_resume")}</h6>
                                         </div>
                                         <div className="progress-load">
