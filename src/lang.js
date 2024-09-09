@@ -32,6 +32,12 @@ const resources = {
             "experience_5": "Web Designer",
             "worked_with": "Worked with",
             "my_resume": "My Resume!",
+            "check_my": "Check my",
+            "projects": "projects here!",
+            "contact_me": "Contact me",
+            "by_email": "via email",
+            "resume": "Resume!",
+            "download_my": "Download my",
         }
     },
     es: {
@@ -64,6 +70,12 @@ const resources = {
             "experience_5": "Diseñador Web",
             "worked_with": "Trabajado con",
             "my_resume": "¡Mi Currículum!",
+            "check_my": "Revisa mis",
+            "projects": "proyectos aquí!",
+            "contact_me": "Contáctame",
+            "by_email": "por correo electrónico",
+            "resume": "Currículum!",
+            "download_my": "Descarga mi",
         }
     },
     ca: {
@@ -96,6 +108,12 @@ const resources = {
             "experience_5": "Dissenyador Web",
             "worked_with": "Treballat amb",
             "my_resume": "El meu Currículum!",
+            "check_my": "Mira els meus",
+            "projects": "projectes aquí!",
+            "contact_me": "Contacta'm",
+            "by_email": "per correu electrònic",
+            "resume": "Currículum!",
+            "download_my": "Descarrega el meu",
         }
     },
     de: {
@@ -128,6 +146,12 @@ const resources = {
             "experience_5": "Webdesigner",
             "worked_with": "Arbeitet mit",
             "my_resume": "Mein Lebenslauf!",
+            "check_my": "Siehe meine",
+            "projects": "Projekte hier!",
+            "contact_me": "Kontaktieren Sie mich",
+            "by_email": "per E-Mail",
+            "resume": "Lebenslauf!",
+            "download_my": "Lade meinen",
         }
     },
 };

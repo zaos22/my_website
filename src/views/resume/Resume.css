@@ -47,6 +47,13 @@
   background-color: #f18b47;
 }
 
+/* Label text BTN*/
+.label-text{
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
 /* Box Center Template */
 .center-box-resume {
   background: url("../../img/background-image6.gif") no-repeat center fixed;
@@ -231,8 +238,20 @@
   outline: 0;
 }
 
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
 /* Responsive */
 @media only screen and (min-width: 1224px) {
+  .label-text{
+    font-size: 16px;
+  }
+
   .btn-github {
     width: 50px;
     height: 70px;

@@ -49,7 +49,8 @@ function Resume() {
             case 'es':
                 return (
                     <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
-                        <div className='p-3'>
+                        <div className='p-3 centered-content'>
+                        <label className="pb-2 label-text text" htmlFor="myGitHub">{t("download_my")} {t("resume")}</label>
                             <a href="docs/MyCV_es.pdf" className="btn-download" aria-label='Descarga mi curriculum en español' download></a>
                         </div>
                     </div>
@@ -57,7 +58,8 @@ function Resume() {
             case 'ca':
                 return (
                     <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
-                        <div className='p-3'>
+                        <div className='p-3 centered-content'>
+                        <label className="pb-2 label-text text" htmlFor="myGitHub">{t("download_my")} {t("resume")}</label>
                             <a href="docs/MyCV_ca.pdf" className="btn-download" aria-label="Descarrega't el meu currículum en català" download></a>
                         </div>
                     </div>
@@ -65,7 +67,8 @@ function Resume() {
             case 'de':
                 return (
                     <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
-                        <div className='p-3'>
+                        <div className='p-3 centered-content'>
+                        <label className="pb-2 label-text text" htmlFor="myGitHub">{t("download_my")} {t("resume")}</label>
                             <a href="docs/MyCV_de.pdf" className="btn-download" aria-label='Laden Sie meinen Lebenslauf auf Deutsch herunter' download></a>
                         </div>
                     </div>
@@ -73,7 +76,8 @@ function Resume() {
             default:
                 return (
                     <div className="col-12 col-md-4 d-flex justify-content-center btn3-load">
-                        <div className='p-3'>
+                        <div className='p-3 centered-content'>
+                            <label className="pb-2 label-text text" htmlFor="myGitHub">{t("download_my")} {t("resume")}</label>
                             <a href="docs/MyCV_en.pdf" className="btn-download" aria-label='Download my resume in English' download></a>
                         </div>
                     </div>
@@ -121,7 +125,7 @@ function Resume() {
                                     </div>
                                     <div className='mt-4'>
                                         <div className="label-bar-load text-white">
-                                            <h6 className='progress-text'>{t("my_resume")}</h6>
+                                            <h6 className='progress-text text'>{t("my_resume")}</h6>
                                         </div>
                                         <div className="progress-load">
                                             <ProgressLine
@@ -129,7 +133,7 @@ function Resume() {
                                                 visualParts={[
                                                     {
                                                         percentage: "99%",
-                                                        color: "indianred"
+                                                        color: "lightgreen"
                                                     }
                                                 ]}
                                             />
@@ -137,12 +141,14 @@ function Resume() {
                                     </div>
                                     <div className="row g-0">
                                         <div className="col-12 col-md-4 d-flex justify-content-center btn1-load">
-                                            <div className='p-3'>
-                                                <a target="blank" href="https://github.com/zaos22" className="btn-github" aria-label='Check my GitHub'></a>
+                                            <div className='p-3 centered-content'>
+                                                <label className="pb-2 label-text text" htmlFor="myGitHub">{t("check_my")} {t("projects")}</label>
+                                                <a name="myGitHub" target="blank" href="https://github.com/zaos22" className="btn-github" aria-label='Check my GitHub'></a>
                                             </div>
                                         </div>
                                         <div className="col-12 col-md-4 d-flex justify-content-center btn2-load">
-                                            <div className='p-3'>
+                                            <div className='p-3 centered-content'>
+                                                <label className="pb-2 label-text text" htmlFor="myGitHub">{t("contact_me")} {t("by_email")}</label>
                                                 <a href="mailto:ozazou2001@gmail.com" className="btn-mail" aria-label='Contact me via mail'></a>
                                             </div>
                                         </div>
